@@ -5,8 +5,25 @@ body{
     flex-direction: column;
 }
 
-.header{
+#header{
     display: flex;
     flex-direction: row;
-    
+    align-items: center;
+    width: 250px;
+    height: 60px;
+    justify-content: space-around;
+}
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-around;
+}
+
+#grids{
+    height: 500px;
+    width: 500px;
+    display: grid;
+    border: 1px solid black;
 }
