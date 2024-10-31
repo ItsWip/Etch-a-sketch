@@ -52,3 +52,8 @@ function color_selection(){
         this.style.backgroundColor= "black";
     }
 }
+
+function reset_btn(){
+    let all_grid= document.querySelectorAll(".grids div");
+    all_grid.forEach((grid)=> grid.style.backgroundColor= `#c5c6d0`);
+}
