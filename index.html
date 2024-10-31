@@ -12,13 +12,14 @@
     <h1>Etch-a-sketch</h1>
     <div id="header">
         <h6>Select size of the grid</h6>
-        <button id="prompt" class="btn btn-primary">Select</button>
+        <button id="prompt" class="btn btn-primary">Select</button>      
     </div>
-    <div id="container"></div>
+    <p id="reply"></p>
+    <div class="grids"></div>
     <div id="footer">
-        <button class="btn btn-dark">Black</button>
-        <button class="btn btn-danger">Random</button>
-        <button class="btn btn-light">Erase</button>
+        <button class="btn btn-dark" onclick="set_color('black')">Black</button>
+        <button class="btn btn-danger" onclick="set_color('random')">Random</button>
+        <button class="btn btn-light" onclick="set_color('erase')">Erase</button>
     </div>
 </body>
 </html>
