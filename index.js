@@ -1,6 +1,18 @@
+let color= "black";
+let drawing= false;
+
 document.addEventListener("DOMContentLoaded", function(){
-    let color= "black";
     createboard(16);
+
+    document.querySelector(".grids").addEventListener("click", function(e){
+        drawing= !drawing;
+        let draw= document.querySelector("#draw");
+        if(drawing){
+            let draw= document.innerHTML("Click to lift the pen.");
+        }else{
+            let draw= document.innerHTML("Click to draw.");
+        }
+    })
 
     let select_btn= document.querySelector("#prompt");
     select_btn.addEventListener("click",function(){
@@ -31,7 +43,7 @@ function getsize(){
     if (input === ""){
         reply.innerHTML= "Don't you have a keyboard?\n Use that education loan to buy one.";
     }else if(input>0 && input<100){
-        reply.innerHTML= "Just do it."
+        reply.innerHTML= "Click to use pen."
         return input;
     }else{
         reply.innerHTML= "Last time someone did this was a blind arts student. \n Is it you again?";
@@ -44,12 +56,14 @@ function set_color(new_color){
 }
 
 function color_selection(){
-    if(color=== "random"){
-        this.style.backgroundColor= `hsl(${Math.random()*360},100%,50%)`;
-    }else if(color=== "erase"){
-        this.style.backgroundColor= `#c5c6d0`;
-    }else{
-        this.style.backgroundColor= "black";
+    if(drawing){
+        if(color=== "random"){
+            this.style.backgroundColor= `hsl(${Math.random()*360},100%,50%)`;
+        }else if(color=== "erase"){
+            this.style.backgroundColor= `#c5c6d0`;
+        }else{
+            this.style.backgroundColor= "black";
+        }
     }
 }
 
